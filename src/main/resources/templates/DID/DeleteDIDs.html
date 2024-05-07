@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:insert="fragments :: headerfiles">
+    <title>Borrar DID</title>
+</head>
+<body>
+<header th:insert="fragments :: nav"></header>
+    <form th:action="@{/DID/DeleteDIDs}" method="post">
+        <input type="text" name="did" placeholder="DID a eliminar">
+        <button type="submit">Enviar</button>
+    </form>
+
+    
+    <!-- Botón 2 -->
+    <a th:href="@{/DID/listDIDs}"><button>Todas las DIDs</button></a>
+
+
+<footer th:insert="fragments :: footer"></footer>
+<div th:insert="fragments :: scripts"></div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:insert="fragments :: headerfiles">
+</head>
+<body>
+<header th:insert="fragments :: nav"></header>
+
+<div class="container">
+    <div class="jumbotron">
+        <h1 class="display-4">Error</h1>
+        <p class="lead">Los datos introducidos son errones o puede que no este logeado</p>
+        <hr class="my-4">
+        <p>Vuelve a la pagina previa en caso de que los valores que han sido introducidos no son correctos en caso de no estar logeado
+            registrese.
+        </p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+</div>
+
+<footer th:insert="fragments :: footer"></footer>
+<div th:insert="fragments :: scripts"></div>
+</body>
+</html>

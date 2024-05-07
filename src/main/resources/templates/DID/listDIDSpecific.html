@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:insert="fragments :: headerfiles">
+    <title>DID especifica</title>
+</head>
+<body>
+<header th:insert="fragments :: nav"></header>
+
+    <form th:action="@{/DID/listDIDSpecific}" method="post">
+        <input type="text" name="did" placeholder="Did especifico a buscar...">
+        <button type="submit">Buscar</button>
+    </form>
+    <div th:if="${resultado != null}" th:text="${resultado}"></div>
+
+
+
+    
+    <!-- Botón 2 -->
+    <a th:href="@{/DID/listDIDs}"><button>Todas las DIDs</button></a>
+
+
+<footer th:insert="fragments :: footer"></footer>
+<div th:insert="fragments :: scripts"></div>
+</body>
+</html>

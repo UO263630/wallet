@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org"
+       xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:insert="fragments :: headerfiles">
+</head>
+<body>
+<header th:insert="fragments :: nav"></header>
+
+
+    <h1>Wallet</h1>
+    <ul>
+        <!-- Iterar sobre la lista de datos y mostrar cada elemento como un elemento de lista -->
+        <li th:each="datoW : ${wallet}" th:text="${datoW}"></li>
+    </ul>
+
+
+    
+    <!-- Botón 2 -->
+    <a th:href="@{/DID/listDIDs}"><button>Todas las DIDs</button></a>
+
+
+    <!-- Botón 2 -->
+    <a th:href="@{/Credential/listCredentials}"><button>Todas las Credenciales</button></a>
+
+
+    
+<footer th:insert="fragments :: footer"></footer>
+<div th:insert="fragments :: scripts"></div>
+</body>
+</html>
